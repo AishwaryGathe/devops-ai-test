@@ -1,0 +1,16 @@
+name: Test Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run failing command
+        run: |
+          echo "Starting build..."
+          invalid_command_here
