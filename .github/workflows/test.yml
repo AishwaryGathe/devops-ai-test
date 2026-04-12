@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Run failing command
+      - name: Force failure
         run: |
-          echo "Starting build..."
+          echo "Start"
           invalid_command_here
